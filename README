@@ -2,3 +2,14 @@ Cruscotto
 
 A light framework for an extensible dashboard.
  
+Motivation
+
+do I really need another dashboard? just fun?
+
+Ideas
+
+Cruscotto provides a container for notification/interaction topics
+* each topic can be collapsed/expanded
+* topics may auto-expand to catch attention
+* topics can be contributed via a plug-in mechanism
+ 
