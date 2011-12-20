@@ -1,10 +1,14 @@
 package com.github.cruscotto;
 
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
 
 public class Cruscotto {
 
@@ -44,6 +48,20 @@ public class Cruscotto {
 		Display display = new Display();
 		Shell shell = new Shell(display);
 		Cruscotto cruscotto = new Cruscotto(shell);
+
+		// add admin topic
+		new TopicContainer(cruscotto, "admin") {
+			@Override
+			public void createContent(Composite contentArea) {
+				contentArea.setLayout(new GridLayout(2, false));
+				Label fontLabel = new Label(contentArea, SWT.NONE);
+				fontLabel.setText("Header Font size:");
+				fontLabel.setBackground(contentArea.getBackground());
+				Text fontSize = new Text(contentArea, SWT.SINGLE | SWT.FLAT);
+				fontSize.setText("10");
+				fontSize.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false));
+			}
+		};
 
 		// add two topics, just for test...
 		new TopicContainer(cruscotto, "one");
