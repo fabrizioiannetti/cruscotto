@@ -24,9 +24,10 @@ public class Cruscotto {
 		layout.marginTop = 0;
 		layout.horizontalSpacing = 0;
 		layout.marginWidth = 0;
+		layout.verticalSpacing = 0;
 		topContainer.setLayout(layout);
-		shellBgColor = new Color(topContainer.getDisplay(), 255, 255, 255);
-		topContainer.setBackground(shellBgColor);
+		shellBgColor = new Color(topContainer.getDisplay(), 255, 255, 0);
+//		topContainer.setBackground(shellBgColor);
 	}
 
 	public void dispose() {
